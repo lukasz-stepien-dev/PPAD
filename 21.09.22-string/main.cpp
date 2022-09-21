@@ -21,16 +21,21 @@ void ex1()
 
 void ex2()
 {
-	string hello = "Hello ";
-	string world = " world!";
-	string output;
-	output.append(hello);
-	output.append(world);
-	cout << output;
-	
+    string str;
+    string str2 = "Writing ";
+    string str3="print 10 and then 5 more";
+    str.append(str2);
+    str.append(str3,6,3);
+    str.append("dots are cool",5);
+    str.append("here: ");
+    str.append(10u,'.');
+    str.append(str3.begin()+8,str3.end());
+    str.append(5,0x2E);
+	cout << str;
 }
 
 int main()
 {
+    ex2();
 	return 0;
 }
