@@ -36,6 +36,11 @@ public:
         x = 0;
         y = 0;
     }
+
+    ~Punkt()
+    {
+        cout << "Usunieto obiekt";
+    }
 };
 
 int main() {
