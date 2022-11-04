@@ -28,6 +28,14 @@ public:
     {
         return this->y;
     }
+
+    Punkt() 
+    {
+        cout << "Utworzono obiekt\n";
+
+        x = 0;
+        y = 0;
+    }
 };
 
 int main() {
