@@ -39,7 +39,7 @@ public:
 
     ~Punkt()
     {
-        cout << "Usunieto obiekt";
+        cout << "Usunieto obiekt\n";
     }
 };
 
@@ -49,7 +49,7 @@ int main() {
     p1.setX(2);
     p1.setY(5);
 
-    cout << "( " << p1.getX() << ", " << p1.getY() << " )";
+    cout << "( " << p1.getX() << ", " << p1.getY() << " )" << endl;
 
     return 0;
 }
