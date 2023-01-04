@@ -22,6 +22,19 @@ int main()
     cin >> brutto;
     cout << "Podaj podatek: ";
     cin >> tax;
-    cout << "Cena netto: " << ex1(brutto, tax);
+    cout << "Cena netto: " << ex1(brutto, tax) << endl;
+
+    string products[] = { "Ogorki", "Pomidory", "Ziemniaki", "Jablka" };
+    int idProduct = 0;
+    cout << "Podaj numer produkty, ktory chcesz wyświetlis" << endl;
+    cin >> idProduct;
+    idProduct--;
+    while (idProduct > 3 || idProduct < 0)
+    {
+        cout << "Podaj poprawna wartosc: ";
+        cin >> idProduct;
+        idProduct--;
+    }
+    cout << "Wybrany produkt: " << products[idProduct];
 }
 
