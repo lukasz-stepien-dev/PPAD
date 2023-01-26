@@ -32,6 +32,7 @@ void show_data(struct Box *box)
     Console(box->height);
     Console(box->width);
     Console(box->length);
+    delete box;
 }
 
 int main()
