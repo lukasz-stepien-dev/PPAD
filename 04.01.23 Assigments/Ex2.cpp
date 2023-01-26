@@ -29,6 +29,9 @@ struct Box
 void show_data(struct Box *box)
 {
     Console(box->name);
+    Console(box->height);
+    Console(box->width);
+    Console(box->length);
 }
 
 int main()
