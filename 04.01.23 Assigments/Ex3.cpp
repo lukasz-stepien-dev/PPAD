@@ -5,6 +5,8 @@ using namespace std;
 
 #define CONSOLE(x) cout << x << endl;
 
+const short year = 2023;
+
 struct Person
 {
     void set_first_name(char * letter)
@@ -20,6 +22,17 @@ struct Person
     void set_pesel(char text[])
     {
         strcpy(pesel, text);
+        string s_year_of_born = text;
+        short short_year_of_born;
+        s_year_of_born = s_year_of_born.substr(0, 2);
+        short_year_of_born = stoi(s_year_of_born);
+        if (pesel[3] == 0)
+        {
+            age = year - (short_year_of_born + 1900); 
+        } else 
+        {
+            age = year - (short_year_of_born + 2000);
+        }
     }
 
     char get_first_name()
@@ -37,6 +50,11 @@ struct Person
         return pesel;
     }
 
+    short get_age()
+    {
+        return age;
+    }
+
     private:
         char * first_name;
         char last_name[30];
@@ -47,7 +65,6 @@ struct Person
 int main() 
 {
     Person person1;
-    const short year = 2023;
     char first_name;
     char c_last_name[30];
     char c_pesel[10];
@@ -60,7 +77,7 @@ int main()
     CONSOLE("Podaj swoje nazwisko:");
     cin.ignore();
     getline(cin, s_last_name);
-    strcpy(c_last_name, s_last_name.c_str());
+    strncpy(c_last_name, s_last_name.c_str(), 30);
     CONSOLE("Podaj swoj PESEl (spokojnie bedzie u nas bezpieczny):");
     cin >> s_pesel;
     strcpy(c_pesel, s_pesel.c_str());
@@ -71,5 +88,6 @@ int main()
     CONSOLE(person1.get_first_name());
     CONSOLE(person1.get_last_name());
     CONSOLE(person1.get_pesel());
+    CONSOLE(person1.get_age());
     return 0;
 }
