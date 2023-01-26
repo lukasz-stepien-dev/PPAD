@@ -14,6 +14,8 @@ C. Napisz funkcję, która przyjmuje referencję do struktury pudelko i wyświet
 D. Napisz funkcję, która przyjmuje referencję do struktury pudelko, oblicza i ustawia składowe pole i objetosc.
 */
 
+#define Console(x) cout << x << endl; 
+
 struct Box 
 {
     char* name;
@@ -24,6 +26,11 @@ struct Box
     float volume;
 };
 
+void show_data(struct Box *box)
+{
+    Console(box->name);
+}
+
 int main()
 {
     Box my_box;
@@ -31,5 +38,6 @@ int main()
     my_box.height = 5;
     my_box.width = 10;
     my_box.length = 3;
+    show_data(&my_box);
     return 0;
 }
