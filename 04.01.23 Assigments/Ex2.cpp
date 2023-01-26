@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -13,8 +14,22 @@ C. Napisz funkcję, która przyjmuje referencję do struktury pudelko i wyświet
 D. Napisz funkcję, która przyjmuje referencję do struktury pudelko, oblicza i ustawia składowe pole i objetosc.
 */
 
+struct Box 
+{
+    char* name;
+    float height;
+    float width;
+    float length;
+    float area;
+    float volume;
+};
+
 int main()
 {
-
+    Box my_box;
+    strcpy(my_box.name, "Moje pudelko");
+    my_box.height = 5;
+    my_box.width = 10;
+    my_box.length = 3;
     return 0;
 }
