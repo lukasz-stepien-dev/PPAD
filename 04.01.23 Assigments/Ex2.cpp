@@ -26,13 +26,13 @@ struct Box
     float volume;
 };
 
-void show_data(struct Box *box)
+// A
+void show_data(struct Box box)
 {
-    Console(box->name);
-    Console(box->height);
-    Console(box->width);
-    Console(box->length);
-    delete box;
+    Console(box.name);
+    Console(box.height);
+    Console(box.width);
+    Console(box.length);
 }
 
 int main()
@@ -42,6 +42,7 @@ int main()
     my_box.height = 5;
     my_box.width = 10;
     my_box.length = 3;
-    show_data(&my_box);
+    Console("A:");
+    show_data(my_box);
     return 0;
 }
